@@ -714,6 +714,30 @@ textarea {
   }
 }
 
+// ALYSON STONER BOOK LAUNCH PAGE
+.as-book-hero-container {
+  max-width: 1800px;
+  background: $white;
+  position: relative;
+  display: flex;
+  padding-top: 5rem;
+  margin: 5rem;
+  justify-content: center;
+  align-items: center;
+}
+.as-book-hero-img {
+  margin-left: 8rem;
+}
+.as-book-cover {
+  width: 80%;
+}
+.as-book-hero-text {
+  margin-right: 8rem;
+  h1 {
+    color: $orange;
+  }
+}
+
 // DEAR HOLLYWOOD 
 .page-id-607 {
   background-color: #eaeaec;
@@ -727,8 +751,7 @@ textarea {
 }
 
 .alyson-hero-img {
-  width: 100%;
-  margin-bottom: -5px;
+  width: 40%;
 }
 .alyson-hero-img-mobile {
   display: none;
