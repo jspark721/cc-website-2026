@@ -304,7 +304,6 @@ p {
 .hero h1 {
   line-height: 0.8;
   padding-bottom: 1rem;
-  color: #fe8701;
 }
 
 .hero p {
@@ -521,6 +520,131 @@ p {
   color: #00727c;
   font-weight: 700;
   font-size: clamp(0.75rem, 1.3vw, 2rem);
+}
+
+.hero-masked-singer {
+  background-color: #141414;
+  padding: 72px 0 0 0;
+}
+.hero-masked-singer h1 {
+  color: #00727c;
+  line-height: 0.8;
+  padding-bottom: 1rem;
+}
+.hero-masked-singer p {
+  color: #fafafa;
+}
+
+.hero__image-masked-singer img {
+  width: 95%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  max-width: 1000px;
+}
+
+.hero__content-masked-singer {
+  max-width: 700px;
+}
+
+.hero__masked-singer-main {
+  background-color: #00727c;
+}
+
+.hero__masked-singer-img {
+  width: 100%;
+  max-width: 800px;
+  padding-top: 1rem;
+}
+
+.checklist-first-item {
+  margin-top: 0;
+}
+
+.masked-singer__icon-list {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.masked-singer__icon-list img {
+  width: 70px;
+  height: auto;
+}
+
+.margin-top {
+  margin-top: 4rem;
+}
+
+.masked-singer__icon-list-text {
+  font-size: clamp(1rem, 4vw, 2rem);
+  line-height: 1.3;
+  font-weight: 400;
+  font-family: "Sofia Sans", sans-serif;
+  color: #fafafa;
+}
+
+.masked-singer__results {
+  text-align: center;
+}
+
+.masked-singer__results-title {
+  font-size: clamp(1.8rem, 4vw, 4rem);
+  font-weight: 800;
+  color: #00727c;
+  text-transform: uppercase;
+  font-family: "Sofia Sans Condensed", sans-serif;
+}
+
+.masked-singer__results-stat {
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-weight: 800;
+  color: #00727c;
+  font-family: "Sofia Sans Extra Condensed", sans-serif;
+  margin-bottom: -1.5rem;
+}
+
+.masked-singer__results-label {
+  font-size: clamp(1.2rem, 2.5vw, 1.4rem);
+  font-weight: 600;
+  color: #00727c;
+  font-family: "Sofia Sans Condensed", sans-serif;
+}
+
+.results-line-left {
+  width: 400px;
+  height: 0;
+  border-top: 2px solid teal;
+  transform: rotate(150deg);
+}
+
+.masked-singer-stats__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 0 auto;
+  grid-gap: 5rem;
+  font-family: "Sofia Sans", sans-serif;
+}
+
+.masked-singer-stats__card {
+  border: 2px solid #00727c;
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  background-color: #fafafa;
+}
+
+.ms-stat__number {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 800;
+  color: #00727c;
+  line-height: 1;
+}
+
+.ms-stat__label {
+  font-size: clamp(0.75rem, 1.5vw, 2rem);
+  color: #00727c;
+  font-weight: 700;
 }
 
 /* ─── Responsive ─── */
