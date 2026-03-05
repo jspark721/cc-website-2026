@@ -717,6 +717,92 @@ p {
   width: 90%;
 }
 
+.hero-awkwafina {
+  position: relative;
+  width: 100vw;
+  height: auto;
+  margin-bottom: -10px;
+}
+.hero-awkwafina img {
+  width: 100%;
+}
+
+.hero__content-awkwafina {
+  max-width: 750px;
+  padding-inline: var(--px-desktop);
+  position: absolute;
+  top: 30%;
+}
+.hero__content-awkwafina h1 {
+  color: #3b39ff;
+  line-height: 0.8;
+  padding-bottom: 1rem;
+}
+.hero__content-awkwafina p {
+  font-family: "Sofia Sans Condensed", sans-serif;
+  font-size: clamp(1.05rem, 1.8vw, 1.9rem);
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+.hero__awkwafina-main {
+  background: #3b39ff;
+}
+
+.awkwafina-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5rem;
+  margin-top: 2rem;
+}
+
+.awkwafina-grid__item {
+  text-align: center;
+  padding: 3rem;
+}
+.awkwafina-grid__item img {
+  width: 70px;
+  height: auto;
+}
+
+.awkwafina-grid__text {
+  color: #fafafa;
+  font-size: clamp(1.2rem, 2vw, 2rem);
+  font-family: "Sofia Sans", sans-serif;
+  font-weight: 300;
+}
+
+.awkwafina__results {
+  text-align: center;
+  font-family: "Sofia Sans Condensed", sans-serif;
+  padding-bottom: 2rem;
+}
+.awkwafina__results h2, .awkwafina__results h3 {
+  color: #3b39ff;
+}
+.awkwafina__results .as-stats__grid {
+  margin-top: 3rem;
+}
+.awkwafina__results .as-stat__card {
+  border: 2px solid #3b39ff;
+}
+.awkwafina__results .as-stat__number, .awkwafina__results .as-stat__label {
+  color: #3b39ff;
+}
+.awkwafina__results .masked-singer-content__grid {
+  padding-bottom: 4rem;
+}
+
+.awkwafina__results-label {
+  color: #3b39ff;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-family: "Sofia Sans", sans-serif;
+  font-weight: 700;
+  margin-top: -1.5rem;
+}
+
 /* ─── Responsive ─── */
 @media screen and (max-width: 1800px) {
   .as-buzz__grid {

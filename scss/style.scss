@@ -680,6 +680,86 @@ body {
     }
   }
 
+  .hero-awkwafina {
+    position: relative;
+    width: 100vw;
+    height: auto;
+    margin-bottom: -10px;
+    img {
+      width: 100%;
+    }
+  }
+  .hero__content-awkwafina {
+    max-width: 750px;
+    padding-inline: var(--px-desktop);
+    position: absolute;
+    top: 30%;
+    h1 {
+      color: $blue;
+      line-height: 0.8;
+      padding-bottom: 1rem;
+    }
+    p {
+      font-family: $subheading;
+      font-size: clamp(1.05rem, 1.8vw, 1.9rem);
+      line-height: 1.5;
+      font-weight: 300;
+    }
+  }
+  .hero__awkwafina-main {
+    background: $blue;
+  }
+  .awkwafina-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5rem;
+    margin-top: 2rem;
+  }
+  .awkwafina-grid__item {
+    text-align: center;
+    padding: 3rem;
+    img {
+      width: 70px;
+      height: auto;
+    }
+  }
+  .awkwafina-grid__text {
+    color: $white;
+    font-size: clamp(1.2rem, 2vw, 2rem);
+    font-family: $body;
+    font-weight: 300;
+  }
+
+  .awkwafina__results {
+    text-align: center;
+    font-family: $subheading;
+    padding-bottom: 2rem;
+    h2, h3 {
+      color: $blue;
+    }
+    .as-stats__grid {
+      margin-top: 3rem;
+    }
+    .as-stat__card {
+      border: 2px solid $blue;
+
+    }
+    .as-stat__number, .as-stat__label {
+      color: $blue;
+    }
+    .masked-singer-content__grid {
+      padding-bottom: 4rem;
+    }
+  }
+  .awkwafina__results-label {
+    color: $blue;
+    font-size: clamp(1.2rem, 1.4rem, 2rem);
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    font-family: $body;
+    font-weight: 700;
+    margin-top: -1.5rem;
+  }
   /* ─── Responsive ─── */
   @media screen and (max-width: 1800px) {
     .as-buzz__grid {
