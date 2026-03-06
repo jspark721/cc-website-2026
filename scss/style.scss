@@ -246,6 +246,73 @@ body {
   }
 }
 
+// ABOUT US PAGE 
+.about-hero {
+  h1 {
+    color: $orange;
+  }
+}
+
+ .about-hero__grid {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    gap: clamp(2rem, 5vw, 6rem);
+    align-items: start;
+    margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+  }
+.about-hero__photo img {
+  width: clamp(220px, 20vw, 450px);
+  border-radius: 30px;
+}
+.about-hero__badge {
+  justify-self: center;
+  align-self: center;
+  img {
+    width: clamp(220px, 16vw, 450px);
+  }
+}
+.about-hero__description {
+  max-width: 800px;
+  p {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-weight: 400;
+    font-family: $body;
+  }
+}
+.about-h2 {
+  color: $teal;
+  margin-top: -2rem;
+  margin-bottom: 2rem;
+}
+.coop-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 3rem;
+  justify-content: center;
+  margin: 0 auto;
+}
+.coop-item {
+  justify-self: center;
+  img {
+    width: 100%;
+    border-radius: 30px;
+    max-width: 337px;
+  }
+}
+.coop-name{
+    color: $teal;
+    font-size: clamp(1.4rem, 2.2rem, 2.9rem);
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 1;
+}
+.about-p {
+  font-family: $subheading;
+  font-weight: 300;
+  margin-top: .2rem;
+  font-size: clamp(1.2rem, 1.5rem, 1.8rem);
+  line-height: 1;
+}
 
 // LANDING PAGE HERO SECTION
 .hero {
@@ -760,6 +827,57 @@ body {
     font-weight: 700;
     margin-top: -1.5rem;
   }
+
+
+  /** TICKER CODE **/
+
+.ticker-container {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.ticker {
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  animation-name: marquee;
+  animation-duration: 60s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  animation-direction: normal;
+  -webkit-animation-name: marquee;
+  -webkit-animation-duration: 60s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+}
+.ticker-blue {
+  background-color: $blue;
+}
+
+.ticker p {
+  display: inline-block;
+  font-family: $subheading;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $white;
+  font-size: 2.3rem;
+  margin: .3rem 0 0 0;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+    -webkit-transform: translate3d(-50%, 0, 0);
+  }
+}
+
   /* ─── Responsive ─── */
   @media screen and (max-width: 1800px) {
     .as-buzz__grid {

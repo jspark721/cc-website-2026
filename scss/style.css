@@ -261,6 +261,79 @@ p {
   opacity: 0.8;
 }
 
+.about-hero h1 {
+  color: #fe8701;
+}
+
+.about-hero__grid {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  gap: clamp(2rem, 5vw, 6rem);
+  align-items: start;
+  margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.about-hero__photo img {
+  width: clamp(220px, 20vw, 450px);
+  border-radius: 30px;
+}
+
+.about-hero__badge {
+  justify-self: center;
+  align-self: center;
+}
+.about-hero__badge img {
+  width: clamp(220px, 16vw, 450px);
+}
+
+.about-hero__description {
+  max-width: 800px;
+}
+.about-hero__description p {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-weight: 400;
+  font-family: "Sofia Sans", sans-serif;
+}
+
+.about-h2 {
+  color: #00727c;
+  margin-top: -2rem;
+  margin-bottom: 2rem;
+}
+
+.coop-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 3rem;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.coop-item {
+  justify-self: center;
+}
+.coop-item img {
+  width: 100%;
+  border-radius: 30px;
+  max-width: 337px;
+}
+
+.coop-name {
+  color: #00727c;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1;
+}
+
+.about-p {
+  font-family: "Sofia Sans Condensed", sans-serif;
+  font-weight: 300;
+  margin-top: 0.2rem;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
 .hero {
   padding-block: clamp(6rem, 14vw, 12rem) clamp(4rem, 10vw, 8rem);
   position: relative;
@@ -803,6 +876,54 @@ p {
   margin-top: -1.5rem;
 }
 
+/** TICKER CODE **/
+.ticker-container {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.ticker {
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  animation-name: marquee;
+  animation-duration: 60s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  animation-direction: normal;
+  -webkit-animation-name: marquee;
+  -webkit-animation-duration: 60s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+}
+
+.ticker-blue {
+  background-color: #3b39ff;
+}
+
+.ticker p {
+  display: inline-block;
+  font-family: "Sofia Sans Condensed", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fafafa;
+  font-size: 2.3rem;
+  margin: 0.3rem 0 0 0;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+    -webkit-transform: translate3d(-50%, 0, 0);
+  }
+}
 /* ─── Responsive ─── */
 @media screen and (max-width: 1800px) {
   .as-buzz__grid {
