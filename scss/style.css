@@ -1575,6 +1575,9 @@ a:hover img {
   .as-stats__grid {
     gap: 0.5rem;
   }
+  .hero-description-as .hero__content h2 {
+    padding-left: 0;
+  }
   .masked-singer__results-lines {
     display: none;
   }
