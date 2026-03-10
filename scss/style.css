@@ -1565,6 +1565,9 @@ a:hover img {
   .service__item {
     gap: 0.5rem;
   }
+  .as-content-pillar-grid {
+    margin-left: 0;
+  }
   .as-content-pillar-videos {
     grid-template-columns: 1fr;
   }
