@@ -74,6 +74,12 @@ body {
     font-family: $body;
   }
 
+  a:hover {
+    img {
+      opacity: .8;
+      transition: .1s ease-in-out;
+    }
+  }
 
 //NAVIGAION
 
@@ -668,11 +674,11 @@ body {
     padding-block: var(--section-py-sm);
 }
 .as-content-pillar-grid-item {
-    padding: 2rem;
+    padding: 1rem;
 }
 .as-content-pillar-text {
   h3 {
-    font-size: clamp(2.5em, 3.5vw, 5rem);
+    font-size: clamp(2.5rem, 3vw, 4.5rem);
     overflow-wrap: break-word;
     word-break: break-word;
     hyphens: auto;
