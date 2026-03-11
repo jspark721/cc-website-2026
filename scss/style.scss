@@ -3,7 +3,7 @@
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-  --max-w: 1980px;
+  --max-w: 1920px;
   --px-desktop: clamp(2rem, 5vw, 6rem);
   --px-mobile: 1.25rem;
   --section-py: clamp(3rem, 5vw, 8rem);
@@ -51,12 +51,12 @@ body {
   }
 
   h1 {
-    font-size: clamp(3rem, 7.5vw, 7rem);
+    font-size: clamp(3.2rem, 7.5vw, 7rem);
     font-family: $heading;
     text-transform: uppercase;
   }
   h2 {
-    font-size: clamp(1.8rem, 6vw, 6rem);
+    font-size: clamp(2.5rem, 6vw, 6rem);
     font-family: $heading;
     text-transform: uppercase;
   }
@@ -505,6 +505,7 @@ body {
 
 // ABOUT US PAGE 
 .about-hero {
+  margin-top: 2rem;
   h1 {
     color: $orange;
   }
@@ -515,10 +516,10 @@ body {
     grid-template-columns: auto auto 1fr;
     gap: clamp(2rem, 5vw, 6rem);
     align-items: start;
-    margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+    margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
   }
 .about-hero__photo img {
-  width: clamp(220px, 20vw, 450px);
+  width: clamp(280px, 20vw, 450px);
   border-radius: 30px;
 }
 .about-hero__badge {
@@ -528,10 +529,13 @@ body {
     width: clamp(220px, 16vw, 450px);
   }
 }
+.about-hero__badge-mobile {
+  display: none;
+}
 .about-hero__description {
   max-width: 800px;
   p {
-    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-size: clamp(1rem, 1.8vw, 1.5rem);
     font-weight: 400;
     font-family: $body;
   }
@@ -558,7 +562,7 @@ body {
 }
 .coop-name{
     color: $teal;
-    font-size: clamp(1.4rem, 2.2rem, 2.9rem);
+    font-size: clamp(1.2rem, 2.5vw, 2.5rem);
     text-transform: uppercase;
     margin: 0;
     line-height: 1;
@@ -567,7 +571,7 @@ body {
   font-family: $subheading;
   font-weight: 300;
   margin-top: .2rem;
-  font-size: clamp(1.2rem, 1.5rem, 1.8rem);
+  font-size: clamp(1rem, 2vw, 1.85rem);
   line-height: 1;
 }
 
@@ -782,7 +786,7 @@ body {
     padding: clamp(1.2rem, 2vw, 1rem);
   }
   .as-stat__number {
-    font-size: clamp(1.8rem, 5vw, 5rem);
+    font-size: clamp(1.4rem, 5vw, 5rem);
     font-weight: 800;
     color: $teal;
     line-height: 1;
@@ -791,6 +795,7 @@ body {
     font-size: clamp(.75rem, 1.5vw, 2rem);
     color: $teal;
     font-weight: 700;
+    line-height: 1;
   }
   .buzz-margin {
     margin-top: 5rem;
@@ -1014,7 +1019,7 @@ body {
     margin-top: 2rem;
     img {
       border-radius: 20px;
-      width: 90%;
+      width: 100%;
     }
   }
 
@@ -1144,7 +1149,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   color: $white;
-  font-size: 2.3rem;
+  font-size: clamp(1.8rem, 2vw, 2.3rem);
   margin: .3rem 0 0 0;
 }
 
@@ -1306,6 +1311,15 @@ body {
       width: 100%;
     }
   }
+  .about-hero__badge {
+    align-self: flex-start;
+    img {
+      max-width: 180px;
+    }
+  }
+  .coop-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
   .masked-singer__icon-list-text {
     font-size: 1.3rem;
   }
@@ -1358,6 +1372,15 @@ body {
   .hero__image { order: -1; }
   .hero__content { align-items: center; text-align: center; }
   .hero__actions { justify-content: center; }
+  .about-hero__photo img {
+    max-width: 230px;
+  }
+  .about-hero__badge img {
+    max-width: 150px;
+  }
+  .about-p {
+    margin: 0;
+  }
   .as-buzz__grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -1434,6 +1457,22 @@ body {
 
 
 @media (max-width: 768px) {
+  .about-hero__badge {
+    display: none;
+  }
+  .about-hero__badge-mobile {
+    display: block;
+    img {
+      max-width: 220px;
+      padding-left: 3rem;
+    }
+  }
+  .about-hero__description {
+    display: flex;
+  }
+  .coop-grid {
+    gap: 1.5rem;
+  }
   .work-grid {
     padding-top: 1rem;
     gap: 1rem;
@@ -1474,6 +1513,7 @@ body {
     margin-top: 2rem;
   }
 }
+
 @media (max-width: 570px) {
   .clients-grid {
     grid-template-columns: 1fr 1fr;
@@ -1501,6 +1541,20 @@ body {
   }
   .service__item {
     gap: .5rem;
+  }
+  .about-hero__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .about-hero__badge-mobile {
+    align-content: center;
+    img {
+      max-width: 170px;
+      padding-left: 1rem;
+    }
+  }
+  .about-hero__photo img {
+    width: 100%;
   }
   .as-content-pillar-grid {
     margin-left: 0;
@@ -1560,11 +1614,17 @@ body {
     gap: .5rem;
     margin-top: 1rem;
   }
+ .margin-top-sm {
+    margin-top: -2rem;
+  }
   .awkwafina__results .masked-singer-content__grid {
     padding-bottom: 2rem;
   }
   .masked-singer-content__vid img {
     width: 100%;
+  }
+  .hero-masked-singer h1 {
+    padding-bottom: 0;
   }
 }
   @media (max-width: 480px) {
@@ -1577,6 +1637,18 @@ body {
     }
     .service__card {
       min-height: 100px;
+    }
+    .about-hero__description {
+      display: block;
+    }
+    .about-hero__badge-mobile {
+      text-align: center;
+      img {
+        max-width: 150px;
+      }
+    }
+    .coop-grid {
+      grid-template-columns: 1fr 1fr;
     }
     .as-buzz__grid {
       grid-template-columns: 1fr;
