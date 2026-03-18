@@ -3,7 +3,7 @@
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-  --max-w: 1920px;
+  --max-w: 1720px;
   --px-desktop: clamp(2rem, 5vw, 6rem);
   --px-mobile: 1.25rem;
   --section-py: clamp(3rem, 5vw, 8rem);
@@ -80,6 +80,17 @@ body {
       transition: .1s ease-in-out;
     }
   }
+
+   /* ─── Scroll Reveal ─── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .d1 { transition-delay: .1s; }
+  .d2 { transition-delay: .2s; }
+  .d3 { transition-delay: .3s; }
 
 //NAVIGAION
 
@@ -682,7 +693,7 @@ body {
 }
 .as-content-pillar-text {
   h3 {
-    font-size: clamp(2.5rem, 3vw, 4.5rem);
+    font-size: clamp(2.5rem, 2.8vw, 4rem);
     overflow-wrap: break-word;
     word-break: break-word;
     hyphens: auto;
@@ -703,8 +714,8 @@ body {
 }
 
  .blue-circle {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     background-color: $blue;
     display: grid;
@@ -712,12 +723,11 @@ body {
   }
   .blue-circle span {
         font-family: $heading;
-        font-size: 4rem;
+        font-size: clamp(2.8rem, 3vw, 4rem);
         font-weight: 800;
         color: $white;
         line-height: 1;
   }
-
   //RESULTS SECTION
 
    .as-results {
@@ -1372,6 +1382,9 @@ body {
   .hero__image { order: -1; }
   .hero__content { align-items: center; text-align: center; }
   .hero__actions { justify-content: center; }
+  .desktop-only-break {
+    display: none;
+  }
   .about-hero__photo img {
     max-width: 230px;
   }
@@ -1386,7 +1399,10 @@ body {
   }
   .as-content-pillar-grid {
     grid-template-columns: 1fr;
-    margin-left: 2rem;
+    text-align: center;
+  }
+  .as-content-pillar-grid-item {
+    justify-items: center;
   }
   .as-content-pillar-videos {
     margin-left: 0;
@@ -1556,11 +1572,14 @@ body {
   .about-hero__photo img {
     width: 100%;
   }
+  .as-main-content h5 {
+    font-size: 1.4rem;
+  }
   .as-content-pillar-grid {
     margin-left: 0;
   }
   .as-content-pillar-videos {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
   .as-stats__grid {
     gap: .5rem;

@@ -12,7 +12,7 @@
 }
 
 :root {
-  --max-w: 1920px;
+  --max-w: 1720px;
   --px-desktop: clamp(2rem, 5vw, 6rem);
   --px-mobile: 1.25rem;
   --section-py: clamp(3rem, 5vw, 8rem);
@@ -89,6 +89,30 @@ p {
 a:hover img {
   opacity: 0.8;
   transition: 0.1s ease-in-out;
+}
+
+/* ─── Scroll Reveal ─── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.d1 {
+  transition-delay: 0.1s;
+}
+
+.d2 {
+  transition-delay: 0.2s;
+}
+
+.d3 {
+  transition-delay: 0.3s;
 }
 
 .navbar {
@@ -732,7 +756,7 @@ a:hover img {
 }
 
 .as-content-pillar-text h3 {
-  font-size: clamp(2.5rem, 3vw, 4.5rem);
+  font-size: clamp(2.5rem, 2.8vw, 4rem);
   overflow-wrap: break-word;
   word-break: break-word;
   hyphens: auto;
@@ -753,8 +777,8 @@ a:hover img {
 }
 
 .blue-circle {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   background-color: #3b39ff;
   display: grid;
@@ -763,7 +787,7 @@ a:hover img {
 
 .blue-circle span {
   font-family: "Sofia Sans Extra Condensed", sans-serif;
-  font-size: 4rem;
+  font-size: clamp(2.8rem, 3vw, 4rem);
   font-weight: 800;
   color: #fafafa;
   line-height: 1;
@@ -1442,6 +1466,9 @@ a:hover img {
   .hero__actions {
     justify-content: center;
   }
+  .desktop-only-break {
+    display: none;
+  }
   .about-hero__photo img {
     max-width: 230px;
   }
@@ -1456,7 +1483,10 @@ a:hover img {
   }
   .as-content-pillar-grid {
     grid-template-columns: 1fr;
-    margin-left: 2rem;
+    text-align: center;
+  }
+  .as-content-pillar-grid-item {
+    justify-items: center;
   }
   .as-content-pillar-videos {
     margin-left: 0;
@@ -1621,11 +1651,14 @@ a:hover img {
   .about-hero__photo img {
     width: 100%;
   }
+  .as-main-content h5 {
+    font-size: 1.4rem;
+  }
   .as-content-pillar-grid {
     margin-left: 0;
   }
   .as-content-pillar-videos {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
   .as-stats__grid {
     gap: 0.5rem;
