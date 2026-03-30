@@ -3,6 +3,19 @@ let video = document.getElementById("hero-video");
 let btn = document.getElementById("video-btn");
 let mobileVideo = document.getElementById("hero-video-mobile");
 
+// scroll reveal
+let revealItems = document.querySelectorAll('.reveal');
+
+const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+revealItems.forEach(el => obs.observe(el));
+
 //mute and unmute video
 function muteUnmute() {
   if(video.muted || mobileVideo.muted) {
@@ -24,3 +37,4 @@ playButton.addEventListener("click", () => {
   mobileVideo.play();
   playButton.remove();
 });
+
