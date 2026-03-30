@@ -103,11 +103,11 @@ body {
   justify-content: space-between;
 }
 .navshadow {
-  box-shadow: 2px 2px 15px rgba(#7a7a7a, .2);
+  box-shadow: 2px 2px 8px rgba(#7a7a7a, .1);
 }
 
 .logo-main {
-  margin-left: 5%;
+  padding-inline: var(--px-desktop);
 }
 
 .cc-logo {
@@ -235,6 +235,7 @@ body {
     text-transform: uppercase;
     font-weight: 500;
     font-family: $body;
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
 }
 .footer-social {
    display: flex;
@@ -335,8 +336,7 @@ body {
 
 .clients-title {
   color: $orange;
-  padding: 5% 0 0 5%;
-  margin: 0;
+  margin-top: 2rem;
 }
 
 .clients-grid-container {
@@ -387,6 +387,7 @@ body {
 .work-container {
   width: 100vw;
   position: relative;
+  padding-bottom: 1.5rem;
 }
 
 .work-orange-lines {
@@ -553,7 +554,6 @@ body {
 }
 .about-h2 {
   color: $teal;
-  margin-top: -2rem;
   margin-bottom: 2rem;
 }
 .coop-grid {
@@ -573,7 +573,7 @@ body {
 }
 .coop-name{
     color: $teal;
-    font-size: clamp(1.2rem, 2.5vw, 2.5rem);
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
     text-transform: uppercase;
     margin: 0;
     line-height: 1;
@@ -582,7 +582,7 @@ body {
   font-family: $subheading;
   font-weight: 300;
   margin-top: .2rem;
-  font-size: clamp(1rem, 2vw, 1.85rem);
+  font-size: clamp(1.3rem, 2vw, 1.85rem);
   line-height: 1;
 }
 
@@ -650,11 +650,6 @@ body {
     .hero__grid {
         align-items: flex-start;
     }
-    .hero__content {
-        h2 {
-            padding-left: 1.8rem;
-        }
-    }
 }
 
 .as-main-content {
@@ -665,10 +660,6 @@ body {
         font-weight: 800;
         line-height: .9;
         padding-top: 20px;
-        overflow-wrap: break-word;
-         hyphens: auto;
-        -webkit-hyphens: auto;
-        -ms-hyphens: auto;  
     }
     h5 {
         color: $blue;
@@ -714,8 +705,8 @@ body {
 }
 
  .blue-circle {
-    width: 70px;
-    height: 70px;
+    width: clamp(50px, 5vw, 70px);
+    height: clamp(50px, 5vw, 70px);
     border-radius: 50%;
     background-color: $blue;
     display: grid;
@@ -723,7 +714,7 @@ body {
   }
   .blue-circle span {
         font-family: $heading;
-        font-size: clamp(2.8rem, 3vw, 4rem);
+        font-size: clamp(2rem, 3vw, 4rem);
         font-weight: 800;
         color: $white;
         line-height: 1;
@@ -793,7 +784,7 @@ body {
   .as-stat__card {
     border: 2px solid $teal;
     border-radius: 20px;
-    padding: clamp(1.2rem, 2vw, 1rem);
+    padding: clamp(0.8rem, 2vw, 1rem);
   }
   .as-stat__number {
     font-size: clamp(1.4rem, 5vw, 5rem);
@@ -1159,8 +1150,8 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   color: $white;
-  font-size: clamp(1.8rem, 2vw, 2.3rem);
-  margin: .3rem 0 0 0;
+  font-size: clamp(1.3rem, 1.8vw, 2.1rem);
+  margin: .5rem 0 0 0;
 }
 
 @keyframes marquee {
@@ -1190,13 +1181,6 @@ body {
   @media screen and (max-width: 1500px) {
     .as-content-pillar-grid-item {
         padding: 0;
-    }
-    .blue-circle {
-      width: 65px;
-      height: 65px;
-    }
-    .blue-circle span {
-      font-size: 3.4rem;
     }
     .as-buzz__item-text {
       max-height: 120px;
@@ -1378,6 +1362,9 @@ body {
 }
 
 @media (max-width: 900px) {
+  .section {
+    padding-block: var(--section-py-sm);
+  }
   .hero__grid { grid-template-columns: 1fr; }
   .hero__image { order: -1; }
   .hero__content { align-items: center; text-align: center; }
@@ -1397,6 +1384,12 @@ body {
   .as-buzz__grid {
     grid-template-columns: 1fr 1fr;
   }
+  .as-buzz__item-text {
+    order: 1;
+  }
+  .as-buzz__item-img {
+    order: 2;
+  }
   .as-content-pillar-grid {
     grid-template-columns: 1fr;
     text-align: center;
@@ -1411,11 +1404,7 @@ body {
     gap: 1.5rem;
   }
   .blue-circle {
-    width: 50px;
-    height: 50px;
-  }
-  .blue-circle span {
-    font-size: 2.5rem;
+    margin: 0 auto;
   }
   .hero__content-masked-singer {
     max-width: none;
@@ -1433,9 +1422,14 @@ body {
       justify-content: flex-start;
       align-items: start;
     }
+    .masked-singer-h2 {
+      width: 100%;
+      text-align: center;
+    }
   }
   .masked-singer__icon-list {
     gap: 1rem;
+    padding: 0 1.5rem;
   }
   .results-line-left::after {
     left: 0;
@@ -1473,6 +1467,9 @@ body {
 
 
 @media (max-width: 768px) {
+  .logo-main, .container {
+    padding-inline: var(--px-mobile);
+  }
   .about-hero__badge {
     display: none;
   }
@@ -1482,6 +1479,9 @@ body {
       max-width: 220px;
       padding-left: 3rem;
     }
+  }
+  .about-h2 {
+    margin-bottom: 1rem;
   }
   .about-hero__description {
     display: flex;
@@ -1510,7 +1510,7 @@ body {
   }
   .clients-title, .services-title {
     font-size: 4.5rem;
-    margin-top: 0;
+    line-height: 0.9;
     text-align: center;
   }
   .results-line-center::after {
@@ -1531,13 +1531,31 @@ body {
 }
 
 @media (max-width: 570px) {
+  .navbar {
+    height: auto;
+  }
+  .cc-logo {
+    max-width: 200px;
+  }
+  .menubox {
+    width: 25px;
+    height: 20px;
+  }
+  .menu-line {
+    height: 2px;
+    margin-bottom: 6px;
+  }
+  .ticker-container {
+    height: 40px;
+  }
+  .ticker p {
+    margin-top: .3rem;
+  }
   .clients-grid {
     grid-template-columns: 1fr 1fr;
     padding-bottom: 2rem;
   }
   .clients-grid-item {
-    padding: 1rem;
-    height: 120px;
     img {
       max-height: 100px;
     }
@@ -1558,6 +1576,9 @@ body {
   .service__item {
     gap: .5rem;
   }
+  .about-hero {
+    padding-inline: 1.7rem;
+  }
   .about-hero__grid {
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
@@ -1574,12 +1595,14 @@ body {
   }
   .as-main-content h5 {
     font-size: 1.4rem;
+    line-height: 1;
   }
   .as-content-pillar-grid {
     margin-left: 0;
   }
   .as-content-pillar-videos {
     grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
   }
   .as-stats__grid {
     gap: .5rem;
@@ -1605,7 +1628,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
-    height: 60vh;
+    height: 80vh;
   }
   .hero__content-awkwafina-mobile {
     position: absolute;
@@ -1647,12 +1670,16 @@ body {
   }
 }
   @media (max-width: 480px) {
+
     .services__grid {
       grid-template-columns: 1fr;
-      margin-top: 1rem;
+      margin-top: 2rem;
     }
     .service__item {
-      padding: 0 1.5rem;
+      padding: 0 5%;
+    }
+    .service__label {
+      height: 65px;
     }
     .service__card {
       min-height: 100px;
@@ -1676,7 +1703,7 @@ body {
       grid-template-columns: 1fr;
     }
     .hero-awkwafina-mobile {
-      height: 75vh;
+      height: 90vh;
     }
     .hero__awkwafina-main h2 {
       text-align: center;

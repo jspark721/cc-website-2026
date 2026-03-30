@@ -125,11 +125,11 @@ a:hover img {
 }
 
 .navshadow {
-  box-shadow: 2px 2px 15px rgba(122, 122, 122, 0.2);
+  box-shadow: 2px 2px 8px rgba(122, 122, 122, 0.1);
 }
 
 .logo-main {
-  margin-left: 5%;
+  padding-inline: var(--px-desktop);
 }
 
 .cc-logo {
@@ -261,6 +261,7 @@ a:hover img {
   text-transform: uppercase;
   font-weight: 500;
   font-family: "Sofia Sans", sans-serif;
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
 }
 
 .footer-social {
@@ -362,8 +363,7 @@ a:hover img {
 
 .clients-title {
   color: #fe8701;
-  padding: 5% 0 0 5%;
-  margin: 0;
+  margin-top: 2rem;
 }
 
 .clients-grid-container {
@@ -418,6 +418,7 @@ a:hover img {
 .work-container {
   width: 100vw;
   position: relative;
+  padding-bottom: 1.5rem;
 }
 
 .work-orange-lines {
@@ -612,7 +613,6 @@ a:hover img {
 
 .about-h2 {
   color: #00727c;
-  margin-top: -2rem;
   margin-bottom: 2rem;
 }
 
@@ -635,7 +635,7 @@ a:hover img {
 
 .coop-name {
   color: #00727c;
-  font-size: clamp(1.2rem, 2.5vw, 2.5rem);
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
   text-transform: uppercase;
   margin: 0;
   line-height: 1;
@@ -645,7 +645,7 @@ a:hover img {
   font-family: "Sofia Sans Condensed", sans-serif;
   font-weight: 300;
   margin-top: 0.2rem;
-  font-size: clamp(1rem, 2vw, 1.85rem);
+  font-size: clamp(1.3rem, 2vw, 1.85rem);
   line-height: 1;
 }
 
@@ -717,9 +717,6 @@ a:hover img {
 .hero-description-as .hero__grid {
   align-items: flex-start;
 }
-.hero-description-as .hero__content h2 {
-  padding-left: 1.8rem;
-}
 
 .as-main-content h3 {
   color: #3b39ff;
@@ -728,10 +725,6 @@ a:hover img {
   font-weight: 800;
   line-height: 0.9;
   padding-top: 20px;
-  overflow-wrap: break-word;
-  hyphens: auto;
-  -webkit-hyphens: auto;
-  -ms-hyphens: auto;
 }
 .as-main-content h5 {
   color: #3b39ff;
@@ -777,8 +770,8 @@ a:hover img {
 }
 
 .blue-circle {
-  width: 70px;
-  height: 70px;
+  width: clamp(50px, 5vw, 70px);
+  height: clamp(50px, 5vw, 70px);
   border-radius: 50%;
   background-color: #3b39ff;
   display: grid;
@@ -787,7 +780,7 @@ a:hover img {
 
 .blue-circle span {
   font-family: "Sofia Sans Extra Condensed", sans-serif;
-  font-size: clamp(2.8rem, 3vw, 4rem);
+  font-size: clamp(2rem, 3vw, 4rem);
   font-weight: 800;
   color: #fafafa;
   line-height: 1;
@@ -861,7 +854,7 @@ a:hover img {
 .as-stat__card {
   border: 2px solid #00727c;
   border-radius: 20px;
-  padding: clamp(1.2rem, 2vw, 1rem);
+  padding: clamp(0.8rem, 2vw, 1rem);
 }
 
 .as-stat__number {
@@ -1241,8 +1234,8 @@ a:hover img {
   font-weight: 700;
   text-transform: uppercase;
   color: #fafafa;
-  font-size: clamp(1.8rem, 2vw, 2.3rem);
-  margin: 0.3rem 0 0 0;
+  font-size: clamp(1.3rem, 1.8vw, 2.1rem);
+  margin: 0.5rem 0 0 0;
 }
 
 @keyframes marquee {
@@ -1270,13 +1263,6 @@ a:hover img {
 @media screen and (max-width: 1500px) {
   .as-content-pillar-grid-item {
     padding: 0;
-  }
-  .blue-circle {
-    width: 65px;
-    height: 65px;
-  }
-  .blue-circle span {
-    font-size: 3.4rem;
   }
   .as-buzz__item-text {
     max-height: 120px;
@@ -1453,6 +1439,9 @@ a:hover img {
   }
 }
 @media (max-width: 900px) {
+  .section {
+    padding-block: var(--section-py-sm);
+  }
   .hero__grid {
     grid-template-columns: 1fr;
   }
@@ -1481,6 +1470,12 @@ a:hover img {
   .as-buzz__grid {
     grid-template-columns: 1fr 1fr;
   }
+  .as-buzz__item-text {
+    order: 1;
+  }
+  .as-buzz__item-img {
+    order: 2;
+  }
   .as-content-pillar-grid {
     grid-template-columns: 1fr;
     text-align: center;
@@ -1495,11 +1490,7 @@ a:hover img {
     gap: 1.5rem;
   }
   .blue-circle {
-    width: 50px;
-    height: 50px;
-  }
-  .blue-circle span {
-    font-size: 2.5rem;
+    margin: 0 auto;
   }
   .hero__content-masked-singer {
     max-width: none;
@@ -1516,8 +1507,13 @@ a:hover img {
     justify-content: flex-start;
     align-items: start;
   }
+  .hero__masked-singer-main .masked-singer-h2 {
+    width: 100%;
+    text-align: center;
+  }
   .masked-singer__icon-list {
     gap: 1rem;
+    padding: 0 1.5rem;
   }
   .results-line-left::after {
     left: 0;
@@ -1553,6 +1549,9 @@ a:hover img {
   }
 }
 @media (max-width: 768px) {
+  .logo-main, .container {
+    padding-inline: var(--px-mobile);
+  }
   .about-hero__badge {
     display: none;
   }
@@ -1562,6 +1561,9 @@ a:hover img {
   .about-hero__badge-mobile img {
     max-width: 220px;
     padding-left: 3rem;
+  }
+  .about-h2 {
+    margin-bottom: 1rem;
   }
   .about-hero__description {
     display: flex;
@@ -1590,7 +1592,7 @@ a:hover img {
   }
   .clients-title, .services-title {
     font-size: 4.5rem;
-    margin-top: 0;
+    line-height: 0.9;
     text-align: center;
   }
   .results-line-center::after {
@@ -1610,13 +1612,29 @@ a:hover img {
   }
 }
 @media (max-width: 570px) {
+  .navbar {
+    height: auto;
+  }
+  .cc-logo {
+    max-width: 200px;
+  }
+  .menubox {
+    width: 25px;
+    height: 20px;
+  }
+  .menu-line {
+    height: 2px;
+    margin-bottom: 6px;
+  }
+  .ticker-container {
+    height: 40px;
+  }
+  .ticker p {
+    margin-top: 0.3rem;
+  }
   .clients-grid {
     grid-template-columns: 1fr 1fr;
     padding-bottom: 2rem;
-  }
-  .clients-grid-item {
-    padding: 1rem;
-    height: 120px;
   }
   .clients-grid-item img {
     max-height: 100px;
@@ -1637,6 +1655,9 @@ a:hover img {
   .service__item {
     gap: 0.5rem;
   }
+  .about-hero {
+    padding-inline: 1.7rem;
+  }
   .about-hero__grid {
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
@@ -1653,12 +1674,14 @@ a:hover img {
   }
   .as-main-content h5 {
     font-size: 1.4rem;
+    line-height: 1;
   }
   .as-content-pillar-grid {
     margin-left: 0;
   }
   .as-content-pillar-videos {
     grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
   }
   .as-stats__grid {
     gap: 0.5rem;
@@ -1684,7 +1707,7 @@ a:hover img {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
-    height: 60vh;
+    height: 80vh;
   }
   .hero__content-awkwafina-mobile {
     position: absolute;
@@ -1728,10 +1751,13 @@ a:hover img {
 @media (max-width: 480px) {
   .services__grid {
     grid-template-columns: 1fr;
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
   .service__item {
-    padding: 0 1.5rem;
+    padding: 0 5%;
+  }
+  .service__label {
+    height: 65px;
   }
   .service__card {
     min-height: 100px;
@@ -1755,7 +1781,7 @@ a:hover img {
     grid-template-columns: 1fr;
   }
   .hero-awkwafina-mobile {
-    height: 75vh;
+    height: 90vh;
   }
   .hero__awkwafina-main h2 {
     text-align: center;
